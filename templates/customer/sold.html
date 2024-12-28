@@ -1,0 +1,98 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sold my car</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_carss.css' %}">
+</head>
+<body>
+    {% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_car.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href="{% url 'home' %}"><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="/revew_request">Revew Request</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Sold My Car </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+</div>
+<div class="buy_form">
+    <form method="post" enctype="multipart/form-data">
+
+        <label for="id_customer">Enter Your id:</label>
+        <br>
+        <input type="number" id="id_customer" name="id_customer"  placeholder="Id" min="1"  required>
+        <br>
+        <label for="cust_name">Enter Your name</label>
+        <br>
+        <input type="text" id="cust_name" name="cust_name" placeholder="Name" required> 
+        <br>
+        <label for="name_car">Enter Name of Car</label>
+        <br>
+        <input type="text" id="name_car" name="name_car" placeholder="Name Car" required>
+        <br>
+        <label for="type_car">Enter Type of Car</label>
+        <br>
+        <input type="text" id="type_car" name="type_car" placeholder="Type Car" required>
+        <br>
+        <label for="manufacture_date_car">Enter manufacture of Car</label>
+        <br>
+        <input type="date" id="manufacture_date_car" name="manufacture_date_car" placeholder="manufacture Car" required>
+        <br>
+        <label for="price_sale_car">Enter Price of Car</label>
+        <br>
+        <input type="number" id="price_sale_car" name="price_sale_car" placeholder="Price Car" required>
+        <br>
+        <label for="kilo_car">Enter Kilo of Car walked</label>
+        <br>
+        <input type="number" id="kilo_car" name="kilo_car" placeholder="Kilo Car" required>
+        <br>
+        <label for="color_car">Enter Color of Car</label>
+        <br>
+        <input type="text" id="color_car" name="color_car" placeholder="Color Car" required>
+        <br>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="image_car">Enter Image of Car</label>
+        <br>
+        <input type="file" id="image_car" name="image_car" placeholder="Image Car" required>
+        <br>
+        {% if message %}
+             <p class="suss_message">{{ message }}</p>
+        {% endif %}
+        <button type="submit">Request</button>
+    </form>
+</div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add car</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_carss.css' %}">
+</head>
+<body>
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_car.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href=""><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'manger' %}">Home</a></li>
+                <!-- <li><a href="/revew_request">Revew Request</a></li> -->
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Add Car </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+</div>
+<div class="buy_form">
+    <form method="post" enctype="multipart/form-data">
+        
+        <label for="name">Enter name car:</label>
+        <br>
+        <input type="text" id="name" name="name"  placeholder="Name Car"   required>
+        <br>
+        <label for="type">Enter type car</label>
+        <br>
+        <input type="text" id="type" name="type" placeholder="Type Car" required> 
+        <br>
+        <label for="manufacture_date">Enter Manufacture date car</label>
+        <br>
+        <input type="date" id="manufacture_date" name="manufacture_date" placeholder="Manufacture date car" required>
+        <br><br><br>
+        <label for="status">Enter status of car</label>
+        <br>
+        <select  id="status" name="status" required>
+            <option value="used">Used</option>
+            <option value="new">New</option>
+        </select>
+        <br><br><br>
+        <label for="price_sale">Enter Price on sale of Car</label>
+        <br>
+        <input type="number" id="price_sale" name="price_sale" placeholder="Price on sale" required>
+        <br>
+        <label for="price_reserv">Enter Price on reserv of Car</label>
+        <br>
+        <input type="number" id="price_reserv" name="price_reserv" placeholder="Price on reserv Car" required>
+        <br>
+        <label for="kilo">Enter Kilo of Car walked</label>
+        <br>
+        <input type="number" id="kilo" name="kilo" placeholder="Kilo Car" required>
+        <br>
+        <label for="color">Enter Color of Car</label>
+        <br>
+        <input type="text" id="color" name="color" placeholder="Color Car" required>
+        <br>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="image">Enter Image of Car</label>
+        <br>
+        <input type="file" id="image" name="image" placeholder="Image Car" required>
+        <br>
+        <label for="stock">Enter stock of car</label>
+        <br>
+        <input type="number" id="stock" name="stock" placeholder="stock of Car" required>
+        <br>
+        <label for="reserv">Check if car can resrv </label>
+        <input type="checkbox" id="reserv" name="reserv">
+        <br>
+        <label for="status_car">status of car </label>
+        <input type="checkbox" id="status_car" name="status_car">
+        <br>
+        {% if message %}
+             <p class="suss_message">{{ message }}</p>
+        {% endif %}
+        <button type="submit">Request</button>
+    </form>
+</div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>
+</body>
+</html>

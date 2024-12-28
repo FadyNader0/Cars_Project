@@ -1,0 +1,112 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_carss.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href="{% url 'home' %}"><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <!-- <li><a href="#About">About</a></li> -->
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Buy New Car </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+    <div class="sorts">
+        <div class="sort">
+            <form method="get">
+                <label for="car_id">Sort By: </label>
+                <select id="car_id" name="sort_by">
+                         <option value="price">Price (Low to High)</option>
+                         <option value="-price">Price (High to Low)</option>
+                </select>
+                <label for="search">Search: </label>
+                <input type="search" name="search" id="search">
+                <label for="car_id">Choose brand of Your car </label>
+                <select id="car_id" name="name_car">
+                    <option value="" >All</option>
+                    {% for x in car %}  
+                        <option value="{{x.name}}">{{x.name}}</option>
+                    {% endfor %}  
+                </select>
+    
+                <button type="submit">Filter</button>
+            </form>    
+        </div>
+    </div>
+    <div class="section_3 cars" id="Revew">
+        <div class="boxs_2">
+            {% if message_3 %}
+                <h2 style="color: red; font-size: 100px;">{{ message_3 }}</h2>
+            {% endif %}  
+            {% for i in car %}   
+            <div class="box_2">
+                <img src="{{i.image.url}}" alt="icon_1">
+                <h2>{{i.name}}  {{i.type}}</h2>
+                <h2>{{i.price_sale}}</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                    quaerat perferendis</p>
+                    {% if i.stock == 0 %}
+                        <h2 style="color: red;">The car out of stock</h2>
+                    {% else %} 
+                         <h2 style="color: rgb(123, 224, 22);">The car in stock</h2>
+                    {% endif %}        
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+    <div class="buy_form">
+        <form method="post">
+            {% csrf_token %}
+            <label for="cust_id">Enter Your id:</label>
+            <br>
+            <input type="number" id="cust_id" name="cust_id"  placeholder="Id" min="14"  required>
+            <br>
+            <label for="cust_name">Enter Your name</label>
+            <br>
+            <input type="text" id="cust_name" name="cust_name" placeholder="Name" required> 
+            <br>
+            <label for="cust_phone">Enter Your phone</label>
+            <br>
+            <input type="tel" id="cust_phone" name="cust_phone" placeholder="Phone" required>
+            <br>
+            <label for="car_id">Select the car with id:</label>
+            <br>
+            <select id="car_id" name="car_id" required>
+              {% for x in car %}
+                      <option value="{{x.ID}}">{{x.name}} {{x.type}}</option>
+              {% endfor %}  
+            </select>
+            <br>
+            {% if message %}
+               <p class="error_message">{{ message }}</p>
+            {% endif %}   
+            {% if message_2 %}
+               <p class="suss_message">{{ message_2 }}</p>
+            {% endif %}   
+            <button type="submit">Buy</button>
+        </form>
+    </div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>

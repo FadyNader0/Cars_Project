@@ -1,0 +1,90 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_carss.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href=""><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'manger' %}">Home</a></li>
+                <!-- <li><a href="#About">About</a></li> -->
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Buy New Car </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+    <div class="sorts">
+        <div class="sort">
+            <form method="get">
+                <label for="ID">Sort By: </label>
+                <select  name="sort_by">
+                         <option value="price">Price (Low to High)</option>
+                         <option value="-price">Price (High to Low)</option>
+                </select>
+                <label for="search">Search: </label>
+                <input type="search" name="search" id="search">
+                <label for="ID">Choose brand of Your car </label>
+                <select  name="name_car">
+                    <option value="" >All</option>
+                    {% for x in car %}  
+                        <option value="{{x.name}}">{{x.name}}</option>
+                    {% endfor %}  
+                </select>
+                <br>
+                <!-- <select  name="resrv_buy">
+                    <option value="reserv">Cars to reserv</option>
+                    <option value="buy">Cars tu buy</option>
+                </select> -->
+
+    
+                <button type="submit">Filter</button>
+            </form>    
+        </div>
+    </div>
+    <div class="section_3 cars" id="Revew">
+        <div class="boxs_2">
+            {% if message_3 %}
+                <h2 style="color: red; font-size: 100px;">{{ message_3 }}</h2>
+            {% endif %}  
+            {% for i in car %}   
+            <div class="box_2">
+                <img src="{{i.image.url}}" alt="icon_1">
+                <h2>{{i.name}}  {{i.type}}</h2>
+                <br>
+                {% if i.price_sale != 0 %}
+                    <h2>Price on sale: {{i.price_sale}}</h2>
+                {% endif %}
+                <br>
+                {% if i.price_reserv != 0 %}
+                    <h2>Price on reserv: {{i.price_reserv}} per day</h2>
+                {% endif %}
+                <br>
+                <h2>Stock : {{ i.stock }}</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                    quaerat perferendis</p>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>

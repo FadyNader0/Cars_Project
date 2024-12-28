@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_homs.css' %}">
+
+
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href=""><h1>CARVELLA</h1></a>
+        </div>
+        <div class="page" >
+            <ul>
+                <li><a href="#Feature">Feature</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="Home">
+        <img src="{% static 'images/manager.jpeg' %} " class="manger_iamge" alt="Example Image">
+        <h2>Manger system cars store in resonable way</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </section>
+    <div class="section_3 hovers" id="Feature">
+        <div class="Portfolio">
+        <h2>Features</h2>
+        </div>
+            <div class="boxs_2">
+                <div class="box_2">
+                    <img src="{% static 'images/add car.png' %}" alt="icon_1">
+                    <h2>Add New Car</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="add_car"><button><h3>Got IT</h3></button></a>
+                    </div>
+                <div class="box_2">
+                    <img src="{% static 'images/Cars.jpeg' %}" alt="icon_1">
+                    <h2>Display all cars</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="display_cars"><button><h3>Got IT</h3></button></a>
+                    </div>
+                <div class="box_2">
+                    <img src="{% static 'images/Edit.jpeg' %}" alt="icon_1">
+                    <h2>Edit car</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="cars"><button><h3>Got IT</h3></button></a>
+                    </div>
+       
+                <div class="box_2">
+                    <img src="{% static 'images/driver.jpeg' %}" alt="icon_1">
+                    <h2>Add driver</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="add_driver"><button><h3>Got IT</h3></button></a>
+                    </div>
+                <div class="box_2">
+                    <img src="{% static 'images/driver_2.jpeg' %}" alt="icon_1">
+                    <h2>Edit driver</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="drivers"><button><h3>Got IT</h3></button></a>
+                    </div>
+                
+                
+                
+                
+                
+
+
+
+                <div class="box_2">
+                    <img src="{% static 'images/resrvation.jpeg' %}" alt="icon_1">
+                    <h2>Resrvations</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="resrvation"><button><h3>Got IT</h3></button></a>
+                    </div>
+
+
+
+                <div class="box_2">
+                    <img src="{% static 'images/request_sold.jpeg' %}" alt="icon_1">
+                    <h2>Request sold</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="request_sold"><button><h3>Got IT</h3></button></a>
+                    </div>
+
+                <div class="box_2">
+                    <img src="{% static 'images/request_repair.jpeg' %}" alt="icon_1">
+                    <h2>Request Repair</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                        <a href="request_repair"><button><h3>Got IT</h3></button></a>
+                    </div>
+       
+            </div>
+    </div>
+    <!-- <div class="section_5 cars" id="Revew">
+        <div class="Portfolio">
+            <h2>Revew Somae cars</h2>
+            <p>if you do it Right, it will last forver</p>
+        </div> 
+  
+        <div class="boxs_3">
+            {% for i in car %} 
+            <div class="box_3">
+                    <img src="{{i.image.url}}" alt="icon_1">
+                    <h2>{{i.name}}  {{i.type}}</h2>
+                     <h2>{{i.price_sale}}</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat tempore officiis minus saepe, 
+                        quaerat perferendis</p>
+                    </div>
+                    {% endfor %}    
+        </div>
+    
+    </div>
+    <div class="section_4" id="contact">
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>We Are Born To Create</p>
+        </div>
+        <div class="links">
+            <div class="mail">
+                <h3>fell free to drop us aline at:</h3>
+                <a href="mailto:fadyn940@gmail.com">fadyn940@gmail.com</a>
+            </div>
+            <div class="social">
+                <p>Find Us On Social Networks</p>
+                <a href="https://www.youtube.com/" target="_blank" ><img src="{% static 'images/youtube.jpeg' %}" alt=""></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'images/facebook.jpeg' %}" alt=""></a>
+                <a href="https://x.com/" target="_blank"><img src="{% static 'images/twiiter.jpeg' %}" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'images/instgram.jpeg' %}" alt=""></a>
+
+            </div>
+        </div>
+
+    </div> -->
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+           <a href="/admin" target="_blank">Admin </a>
+      </div>   
+    </footer>
+</body>
+</html>

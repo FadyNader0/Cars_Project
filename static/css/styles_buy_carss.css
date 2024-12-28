@@ -1,0 +1,272 @@
+/* dtart rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: black;
+}
+/* End rules */
+
+.sort{
+
+    width: 50%;
+
+    height: 90px;
+
+}
+.sort button:hover{
+    display: inline-block;
+    background-color: #0056b3;
+}
+.sort form{
+    width: 100%; 
+    max-width: 300px;
+    margin: 10px ; 
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    /* text-align: center; */
+
+}
+/* .sort form input{
+    display: flex;
+    flex-direction: column;
+} */
+.sort form button[type="submit"]{
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.sort h2{
+    color: white;
+}
+.sort button{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    font-size: 20px;
+}
+nav {
+    /* position: fixed;  */
+    width: 100%; 
+    background-color: black;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+nav a:hover{
+    color: yellow;
+}
+.logo{
+   padding: 20px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+section{
+    color: white;
+    text-align: center;
+    position: relative; 
+    display: inline-block
+}
+section img{
+    display: block; 
+    width: 98.9vw; 
+    height: auto;
+    filter: brightness(50%);
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+section h2,
+section p {
+    position: absolute;
+}
+section h2 {
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    font-weight: 1000;
+    text-transform: capitalize;
+}
+section p {
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px; 
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.cars .box_2:hover {
+    color: mediumblue;
+    background-color: #f0f0f0;
+    transform: scale(1.35); 
+    transition: all 0.3s ease; 
+} 
+.section_3{
+    padding-top: 100px;
+}
+.boxs_2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.Portfolio{
+    text-align: center;
+    margin-top: 30px;
+}
+.Portfolio h2{
+    font-size: 100px;
+    color: #ebeced;
+}
+.Portfolio p{
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #f3f0f0;
+}
+.box_2{
+    width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 40px;
+    background-color: #f6f6f6;
+    height: fit-content;
+}
+.box_2 h2{
+    width: 100%;
+    color:  black;
+}
+.box_2 img{
+    width: 100%;
+    border-radius: 50px 50px 0 0 ;
+    height: 250px;
+}
+.box_2 p{
+    margin: 20px;
+}
+
+/* General Form Styling */
+form {
+
+    width: 100%; 
+    max-width: 500px;
+    margin: 100px auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="number"],
+form input[type="tel"],
+/* form input[type="search"], */
+form input[select]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus State */
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+/* Submit Button */
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 50px;
+}
+
+/* Hover Effect on Submit Button */
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error_message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.suss_message {
+    color: rgb(149, 231, 66);
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end{
+    height: 70px;
+    background-color: #2c4755;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-top: 120px;
+}
+.end p{
+    padding-top: 30px;
+
+}

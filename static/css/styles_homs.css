@@ -1,0 +1,217 @@
+/* dtart rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: black;
+}
+/* End rules */
+nav {
+    position: fixed; 
+    width: 100%; 
+    background-color: black;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+nav a:hover{
+    color: yellow;
+}
+.logo{
+   padding: 20px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+section{
+    color: white;
+    text-align: center;
+    position: relative; 
+    display: inline-block;
+    padding-top: 65px;
+}
+section img{
+    display: block; 
+    width: 98.9vw; 
+    height: auto;
+    filter: brightness(50%);
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+section h2,
+section p {
+    position: absolute;
+}
+section h2 {
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    font-weight: 1000;
+    text-transform: capitalize;
+}
+section p {
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px; 
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+}
+.cars .box_3:hover {
+    color: mediumblue; /* Example: changes text color */
+    background-color: #f0f0f0; /* Example: changes background color */
+    transform: scale(1.35); /* Example: adds a slight zoom effect */
+    transition: all 0.3s ease; /* Smooth transition */
+} 
+.hovers .box_2 button:hover {
+    color: mediumblue; /* Example: changes text color */
+    background-color: #f0f0f0; /* Example: changes background color */
+    transform: scale(1.25); /* Example: adds a slight zoom effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+.hovers .box_2 button{
+    width: 30%;
+    height: 10%;
+    box-shadow: aqua 0px 0px 4px 3px; ;
+}
+.section_3{
+    padding-top: 100px;
+}
+.boxs_2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.Portfolio{
+    text-align: center;
+    margin-top: 30px;
+}
+.Portfolio h2{
+    font-size: 100px;
+    color: #ebeced;
+}
+.Portfolio p{
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #f3f0f0;
+}
+.box_2{
+    width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 40px;
+    background-color: #f6f6f6;
+    height: fit-content;
+}
+.box_2 h2{
+    width: 100%;
+    color:  black;
+}
+.box_2 img{
+    width: 100%;
+    border-radius: 50px 50px 0 0 ;
+    height: 270px;
+}
+.box_2 p{
+    margin: 20px;
+}
+.section_4{
+    text-align: center;
+    margin: 20px;
+}
+.contact h2{
+    font-size: 100px;
+    color: #ebeced;
+}
+.contact p{
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #f3f0f0;
+}
+.links h3{
+    margin-top: 60px;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+}
+.mail{
+    color: aqua;
+    font-size: 45px;
+}
+.social{
+    margin-top: 70px;
+}
+.social p{
+    display: inline-block;
+    font-size: 30px;
+    color: white;
+}
+.social img{
+    width: 20px;
+    height: 20px;
+}
+.end{
+    height: 90px;
+    background-color: #2c4755;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.end a:hover{
+    color: aqua;
+}
+.end p{
+    padding-top: 30px;
+}
+.section_5{
+    padding-top: 100px;
+}
+.boxs_3{
+
+    display: flex;
+    justify-content: space-around;
+}
+.box_3{
+    width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 40px;
+    background-color: #f6f6f6;
+    height: fit-content;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.box_3 h2{
+    width: 100%;
+    color:  black;
+}
+.box_3 img{
+    width: 100%;
+    border-radius: 50px 50px 0 0 ;
+    height: 60%;
+}
+.box_3 p{
+    margin: 20px;
+}
+

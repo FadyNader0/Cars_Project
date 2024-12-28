@@ -1,0 +1,79 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Driver</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_carss.css' %}">
+</head>
+<body>
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_buy_car.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href=""><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'manger' %}">Home</a></li>
+                <!-- <li><a href="/revew_request">Revew Request</a></li> -->
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Add Driver </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+</div>
+<div class="buy_form">
+    <form method="post" enctype="multipart/form-data">
+
+    
+        <label for="ID">Enter ID car:</label>
+        <br>
+        <input type="number" id="ID" name="ID"  placeholder="ID Driver" min="1"  required>
+        <br>
+        <label for="name">Enter name driver</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="name driver" required> 
+        <br>
+        <label for="age">Enter driver age</label>
+        <br>
+        <input type="number" id="age" name="age" placeholder="Driver age" required>
+        <br>
+        <label for="phone">Enter driver phone</label>
+        <br>
+        <input type="number" id="phone" name="phone" placeholder="Driver phone" required>
+        <br>
+        {% csrf_token %}
+        <button type="submit">Request</button>
+        {% if message %}
+            <p class="suss_message">{{ message }}</p>
+        {% endif %}
+
+    </form>
+</div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>
+</body>
+</html>

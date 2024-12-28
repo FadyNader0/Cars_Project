@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <img src="{% static 'images/hq720.jpg' %}" alt="Car Dealership" class="background-image">
+    <div class="login-container">
+        <form class="login-box" method="post" action="{% url 'login' %}">
+            {% csrf_token %} 
+            <h1>CARVELLA</h1>
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <br><br>
+            {% if massage %}
+                <h3>{{massage}}</h3>
+            {% endif %}
+        </form>
+    </div> 
+  
+    <!-- <img src="{% static 'images/hq720.jpg' %}" alt="Car Dealership" class="background-image">
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Car System Store Login</h2>
+            <form action="/login/" method="POST">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                {% if message %}
+                    <div class="error-message">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </div> -->
+
+</body>
+</html>

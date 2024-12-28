@@ -1,0 +1,72 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVELLA</title>
+    <link rel="stylesheet" href="{% static 'css/styles_revew.css' %}">
+</head>
+<body>
+    <nav>
+
+        <div class="logo">
+            <a href="{% url 'home' %}"><h1>CARVELLA</h1></a>
+        </div>
+        
+        <div class="page" >
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Portfolio">
+        <h2>Revew Requset Of Reservation </h2>
+        <p>if you do it Right, it will last forver</p>
+        <br><br><br><br>
+    </div> 
+    <div class="sorts">
+        <div class="sort">
+            <form method="post">
+                {% csrf_token %}
+                <label for="req_id">Please enter request ID: </label>
+                <input type="number" id="req_id" name="id" placeholder="Request ID" required> 
+                </select>
+                <button type="submit">Filter</button>
+            </form>    
+        </div>
+    </div>
+
+    <div class="section_3 cars" id="Revew">
+        <div class="boxs_2">
+            {% for i in requset %}   
+            {% if i == "1" %}
+            <h2 style="color: red;">No request found with this ID</h2> 
+              {% else %}                 
+
+                <div class="box_2">
+                    <h2>Name: {{i.cust_name}}</h2>
+                    <h2>Date From: {{i.date_from}}</h2>
+                    <h2>Date To: {{i.date_to}}</h2>
+                        {% if i.statues == "Refuse" %}
+                            <h2 style="color: red;">Statues: Sorry, We Can't reserv this car</h2>
+                        {% elif i.statues == "Confirm" %} 
+                            <h2 style="color: rgb(123, 224, 22);">Statues: Okay</h2>
+                        {% else %} 
+                            <h2 style="color: cornflowerblue;">Statues: Wating </h2>     
+                        {% endif %}        
+                    </div>
+
+   
+               {% endif %}     
+            {% endfor %}    
+        </div>
+    </div>
+    <footer>
+        <div class="end">
+           <p>© 2021 Leon All Right Reseved</p>
+      </div>   
+    </footer>
+</body>
+</html>
